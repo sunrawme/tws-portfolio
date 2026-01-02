@@ -6,7 +6,7 @@ on:
     - main
 
 jobs:
-  build-and-deploy:
+  deploy:
     runs-on: ubuntu-latest
     steps:
     - name: Checkout
@@ -20,4 +20,4 @@ jobs:
         aws-region: us-east-1
 
     - name: Deploy static site to S3 bucket
-      run: aws s3 sync . s3://tws-junoon --delete
+      run: aws s3 sync . s3://tws-sandeep --delete
